@@ -1,0 +1,17 @@
+.map {
+  height: 437px;
+  background: url("../img/map-mobile.jpg") center no-repeat;
+  @media (min-width: 480px) {
+    background: url("../img/map-tablet-1.jpg") center no-repeat;
+  }
+  @media (min-width: 768px) {
+    background: url("../img/map-tablet-2.jpg") center no-repeat;
+  }
+  @media (min-width: 992px) {
+    background: url("../img/map-desktop-1.jpg") center no-repeat;
+  }
+  @media (min-width: 1366px) {
+    background: url("../img/map-desktop-2.jpg") center no-repeat;
+    background-size: cover;
+  }
+}

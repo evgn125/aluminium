@@ -1,0 +1,41 @@
+.address {
+  position: relative;
+  padding-top: 32px;
+  text-align: center;
+  color: #fff;
+  background: #555;
+  &__title {
+    margin-top: 13px;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__phone {
+    font-weight: bold;
+  }
+  &__email {
+    font-weight: bold;
+  }
+  &__office {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__location {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__triangle {
+    position: absolute;
+    z-index: 2;
+    bottom: -24px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .address {
+    padding-top: 20px;
+  }
+}

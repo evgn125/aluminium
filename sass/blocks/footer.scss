@@ -1,0 +1,35 @@
+.footer {
+  padding: 19px 0 29px;
+  background: #555;
+  &__link {
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+    color: #fff;
+    &:last-child {
+      padding-right: none;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding-bottom: 3px;
+    &__link {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}
