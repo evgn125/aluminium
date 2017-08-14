@@ -181,8 +181,9 @@ img {
   position: relative;
   padding: 131px 0 75px;
   background: url("../img/intro-bg.jpg") center no-repeat;
-  -o-background-size: cover;
-     background-size: cover; }
+  -webkit-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover; }
   .intro::after {
     content: "";
     position: absolute;
@@ -580,8 +581,9 @@ img {
   @media (min-width: 1366px) {
     .map {
       background: url("../img/map-desktop-2.jpg") center no-repeat;
-      -o-background-size: cover;
-         background-size: cover; } }
+      -webkit-background-size: cover;
+           -o-background-size: cover;
+              background-size: cover; } }
 
 .footer {
   padding: 19px 0 29px;

@@ -9,6 +9,7 @@ var gulp = require("gulp"),
   imagemin = require("gulp-imagemin"),
   plumber = require("gulp-plumber"),
   postcss = require("gulp-postcss"),
+  rename = require("gulp-rename"),
   sass = require("gulp-sass"),
   uglify = require("gulp-uglify"),
   uncss = require("postcss-uncss");
@@ -44,8 +45,10 @@ gulp.task("img", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src(["js/jquery.min.js", "js/bootstrap.min.js", "js/script.js"])
-    .pipe(concat("script.min.js"))
+  return gulp.src(["js/script.js"])
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(uglify())
     .pipe(gulp.dest("js"));
 });
@@ -53,15 +56,7 @@ gulp.task("js", function () {
 gulp.task("css", function () {
   var plugins = [
     uncss({
-      html: ["index.html"],
-      ignore: [".fade",
-                  ".fade.in",
-                  ".collapse",
-                  ".collapse.in",
-                  ".collapsing",
-                  ".alert-danger",
-                  /\.open/
-                ]
+      html: ["index.html"]
     }),
     ];
   return gulp.src(["css/bootstrap.css", "css/style.css"])
